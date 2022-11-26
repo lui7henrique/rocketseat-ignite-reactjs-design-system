@@ -16,7 +16,12 @@ export const Sm: StoryObj<ButtonProps> = {
     size: 'sm',
   },
 }
-
+export const Md: StoryObj = {
+  args: {
+    children: 'Enviar',
+    size: 'md',
+  },
+}
 export const Lg: StoryObj = {
   args: {
     children: 'Enviar',
