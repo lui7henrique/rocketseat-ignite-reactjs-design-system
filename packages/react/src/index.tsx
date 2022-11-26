@@ -1,19 +1,39 @@
-import { colors } from '@ignite-ui/tokens'
+import { VariantProps } from '@stitches/react'
+import { ButtonHTMLAttributes } from 'react'
 import { styled } from './styles'
 
-const Button = styled('button', {
-  background: '$ignite700',
+export const Button = styled('button', {
+  variants: {
+    size: {
+      sm: {
+        fontSize: 12,
+        padding: '$1 $2',
+      },
+      md: {
+        fontSize: 16,
+        padding: '$2 $4',
+      },
+      lg: {
+        fontSize: 18,
+        padding: '$4 $8',
+      },
+    },
+  },
+
+  defaultVariants: {
+    size: 'md',
+  },
+
+  background: '$ignite300',
   fontFamily: '$default',
   borderRadius: '$md',
-  width: '$10',
+
+  border: 'none',
+  outline: 'none',
+
+  padding: '$2 $4',
+  color: '$white',
 })
 
-export const App = () => {
-  return (
-    <>
-      <h1 style={{ color: colors.ignite300 }}>Hello World</h1>
-
-      <Button>Hello World!</Button>
-    </>
-  )
-}
+export type ButtonProps = VariantProps<typeof Button> &
+  ButtonHTMLAttributes<HTMLButtonElement>

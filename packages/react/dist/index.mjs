@@ -119,26 +119,34 @@ var {
 });
 
 // src/index.tsx
-import { Fragment, jsx, jsxs } from "react/jsx-runtime";
 var Button = styled("button", {
-  background: "$ignite700",
+  variants: {
+    size: {
+      sm: {
+        fontSize: 12,
+        padding: "$1 $2"
+      },
+      md: {
+        fontSize: 16,
+        padding: "$2 $4"
+      },
+      lg: {
+        fontSize: 18,
+        padding: "$4 $8"
+      }
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  },
+  background: "$ignite300",
   fontFamily: "$default",
   borderRadius: "$md",
-  width: "$10"
+  border: "none",
+  outline: "none",
+  padding: "$2 $4",
+  color: "$white"
 });
-var App = () => {
-  return /* @__PURE__ */ jsxs(Fragment, {
-    children: [
-      /* @__PURE__ */ jsx("h1", {
-        style: { color: colors.ignite300 },
-        children: "Hello World"
-      }),
-      /* @__PURE__ */ jsx(Button, {
-        children: "Hello World!"
-      })
-    ]
-  });
-};
 export {
-  App
+  Button
 };
