@@ -3,5 +3,12 @@
   "workspaces": [
     "packages/*"
   ],
-  "name": "05-design-system"
+  "name": "05-design-system",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build"
+  },
+  "devDependencies": {
+    "turbo": "^1.6.3"
+  }
 }
