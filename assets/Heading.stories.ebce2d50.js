@@ -1,0 +1,2 @@
+import{H as r}from"./index.1bf5a618.js";import"./index.1a9c1e82.js";import"./iframe.34189261.js";import"./index.0fb84222.js";import"./jsx-runtime.e0b64066.js";const i={title:"Typography/Heading",component:r,args:{children:"Custom title"}},m={},p={args:{children:"H1 Heading",as:"h1"},parameters:{docs:{description:{story:"Por padr\xE3o o heading sempre ser\xE1 um `h2`, mas podemos alterar isso com a propriedade `as`."}}}},d=["Primary","CustomTag"];export{p as CustomTag,m as Primary,d as __namedExportsOrder,i as default};
+//# sourceMappingURL=Heading.stories.ebce2d50.js.map
