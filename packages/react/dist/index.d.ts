@@ -1,11 +1,8 @@
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
-import { VariantProps } from '@stitches/react';
-import { ButtonHTMLAttributes } from 'react';
+import { ComponentProps } from 'react';
 
-declare const Button: _stitches_react_types_styled_component.StyledComponent<"button", {
-    size?: "sm" | "md" | "lg" | undefined;
-}, {}, _stitches_react_types_css_util.CSS<{}, {
+declare const Box: _stitches_react_types_styled_component.StyledComponent<"div", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
         white: string;
         black: string;
@@ -207,6 +204,7 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-declare type ButtonProps = VariantProps<typeof Button> & ButtonHTMLAttributes<HTMLButtonElement>;
+interface BoxProps extends ComponentProps<typeof Box> {
+}
 
-export { Button, ButtonProps };
+export { Box, BoxProps };
